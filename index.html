@@ -513,6 +513,8 @@
 
   /* ── RESPONSIVE BÁSICO ── */
   @media (max-width: 900px) {
+    #contacto > div { grid-template-columns: 1fr !important; gap: 3rem !important; }
+    #cookie-banner { padding: 1rem 1.5rem !important; flex-direction: column !important; gap: 1rem !important; }
     section > div[style*="grid-template-columns:1fr 1fr"] { display:block !important; }
     section > div > div:last-child { margin-top:2rem; }
     div[style*="grid-template-columns:repeat(3,1fr)"] { display:block !important; }
@@ -677,6 +679,7 @@
     <li><a href="#proceso">Proceso</a></li>
     <li><a href="#nosotros">Nosotros</a></li>
     <li><a href="#blog">Blog</a></li>
+    <li><a href="#contacto">Contacto</a></li>
     <li><a href="https://wa.me/593999923564" class="nav-cta">Consulta gratis</a></li>
   </ul>
 </nav>
@@ -1020,6 +1023,165 @@
   </div>
 </section>
 
+
+<!-- CONTACTO -->
+<section id="contacto" style="padding:7rem 4rem;background:var(--negro);">
+  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;">
+
+    <!-- Texto izquierda -->
+    <div>
+      <p class="section-label">Contáctenos</p>
+      <h2 class="section-title" style="color:var(--crema);">Cuéntenos su situación</h2>
+      <p style="font-size:1rem;color:rgba(245,240,232,0.6);line-height:1.8;margin-bottom:2.5rem;">
+        Complete el formulario y le respondemos en menos de 2 horas hábiles. Si prefiere una respuesta inmediata, escríbanos por WhatsApp.
+      </p>
+      <div style="display:flex;flex-direction:column;gap:1.2rem;">
+        <div style="display:flex;gap:1rem;align-items:center;">
+          <span style="color:var(--dorado);font-size:1.1rem;">✦</span>
+          <p style="font-size:0.88rem;color:rgba(245,240,232,0.6);">Primera consulta siempre gratuita y sin compromiso</p>
+        </div>
+        <div style="display:flex;gap:1rem;align-items:center;">
+          <span style="color:var(--dorado);font-size:1.1rem;">✦</span>
+          <p style="font-size:0.88rem;color:rgba(245,240,232,0.6);">Atención directa con Santiago Orbe — no con asistentes</p>
+        </div>
+        <div style="display:flex;gap:1rem;align-items:center;">
+          <span style="color:var(--dorado);font-size:1.1rem;">✦</span>
+          <p style="font-size:0.88rem;color:rgba(245,240,232,0.6);">Respuesta en menos de 2 horas hábiles</p>
+        </div>
+        <div style="display:flex;gap:1rem;align-items:center;">
+          <span style="color:var(--dorado);font-size:1.1rem;">✦</span>
+          <p style="font-size:0.88rem;color:rgba(245,240,232,0.6);">Lunes a viernes · 8:00 a 18:00 · Quito, Ecuador</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formulario derecha -->
+    <div>
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST"
+            style="display:flex;flex-direction:column;gap:1rem;">
+
+        <input type="hidden" name="access_key" value="054d1ea9-1c87-475e-a886-968c9250ab50">
+        <input type="hidden" name="subject" value="Nueva consulta desde akuerdos.com">
+        <input type="hidden" name="from_name" value="AKUERDOS Web">
+        <input type="hidden" name="redirect" value="https://www.akuerdos.com/?enviado=true">
+
+        <!-- Nombre -->
+        <div>
+          <label style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,240,232,0.4);display:block;margin-bottom:0.5rem;">
+            Nombre completo *
+          </label>
+          <input type="text" name="name" required placeholder="Ej: Juan Pérez"
+                 style="width:100%;background:rgba(245,240,232,0.05);border:1px solid rgba(245,240,232,0.12);
+                        border-radius:2px;padding:0.85rem 1rem;color:var(--crema);font-family:'DM Sans',sans-serif;
+                        font-size:0.92rem;outline:none;transition:border-color 0.2s;"
+                 onfocus="this.style.borderColor='rgba(184,150,62,0.5)'"
+                 onblur="this.style.borderColor='rgba(245,240,232,0.12)'">
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,240,232,0.4);display:block;margin-bottom:0.5rem;">
+            Correo electrónico *
+          </label>
+          <input type="email" name="email" required placeholder="correo@ejemplo.com"
+                 style="width:100%;background:rgba(245,240,232,0.05);border:1px solid rgba(245,240,232,0.12);
+                        border-radius:2px;padding:0.85rem 1rem;color:var(--crema);font-family:'DM Sans',sans-serif;
+                        font-size:0.92rem;outline:none;transition:border-color 0.2s;"
+                 onfocus="this.style.borderColor='rgba(184,150,62,0.5)'"
+                 onblur="this.style.borderColor='rgba(245,240,232,0.12)'">
+        </div>
+
+        <!-- Teléfono -->
+        <div>
+          <label style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,240,232,0.4);display:block;margin-bottom:0.5rem;">
+            Teléfono / WhatsApp
+          </label>
+          <input type="tel" name="phone" placeholder="+593 99 000 0000"
+                 style="width:100%;background:rgba(245,240,232,0.05);border:1px solid rgba(245,240,232,0.12);
+                        border-radius:2px;padding:0.85rem 1rem;color:var(--crema);font-family:'DM Sans',sans-serif;
+                        font-size:0.92rem;outline:none;transition:border-color 0.2s;"
+                 onfocus="this.style.borderColor='rgba(184,150,62,0.5)'"
+                 onblur="this.style.borderColor='rgba(245,240,232,0.12)'">
+        </div>
+
+        <!-- Área de interés -->
+        <div>
+          <label style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,240,232,0.4);display:block;margin-bottom:0.5rem;">
+            Área de consulta *
+          </label>
+          <select name="area" required
+                  style="width:100%;background:rgba(245,240,232,0.05);border:1px solid rgba(245,240,232,0.12);
+                         border-radius:2px;padding:0.85rem 1rem;color:var(--crema);font-family:'DM Sans',sans-serif;
+                         font-size:0.92rem;outline:none;transition:border-color 0.2s;cursor:pointer;"
+                  onfocus="this.style.borderColor='rgba(184,150,62,0.5)'"
+                  onblur="this.style.borderColor='rgba(245,240,232,0.12)'">
+            <option value="" style="background:#1a1917;">Seleccione un área</option>
+            <option value="Sucesiones y Herencias" style="background:#1a1917;">Sucesiones y Herencias</option>
+            <option value="Derecho Inmobiliario" style="background:#1a1917;">Derecho Inmobiliario</option>
+            <option value="Cobro de Deudas" style="background:#1a1917;">Cobro de Deudas</option>
+            <option value="Defensa ante Contraloría" style="background:#1a1917;">Defensa ante Contraloría</option>
+            <option value="Otro" style="background:#1a1917;">Otro</option>
+          </select>
+        </div>
+
+        <!-- Mensaje -->
+        <div>
+          <label style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,240,232,0.4);display:block;margin-bottom:0.5rem;">
+            Cuéntenos brevemente su situación *
+          </label>
+          <textarea name="message" required rows="4"
+                    placeholder="Describe brevemente su consulta para poder orientarle mejor..."
+                    style="width:100%;background:rgba(245,240,232,0.05);border:1px solid rgba(245,240,232,0.12);
+                           border-radius:2px;padding:0.85rem 1rem;color:var(--crema);font-family:'DM Sans',sans-serif;
+                           font-size:0.92rem;outline:none;transition:border-color 0.2s;resize:vertical;min-height:110px;"
+                    onfocus="this.style.borderColor='rgba(184,150,62,0.5)'"
+                    onblur="this.style.borderColor='rgba(245,240,232,0.12)'"></textarea>
+        </div>
+
+        <!-- Consentimiento datos -->
+        <div style="display:flex;gap:0.8rem;align-items:flex-start;">
+          <input type="checkbox" name="consent" required id="consent-check"
+                 style="margin-top:3px;accent-color:var(--dorado);cursor:pointer;flex-shrink:0;">
+          <label for="consent-check" style="font-size:0.8rem;color:rgba(245,240,232,0.5);line-height:1.5;cursor:pointer;">
+            Acepto el tratamiento de mis datos personales conforme a la
+            <a href="/politica-privacidad.html" target="_blank"
+               style="color:var(--dorado);text-decoration:none;">política de privacidad</a>
+            de AKUERDOS, en cumplimiento de la LOPDP del Ecuador. *
+          </label>
+        </div>
+
+        <!-- Botón enviar -->
+        <button type="submit"
+                style="background:var(--dorado);color:var(--negro);border:none;
+                       padding:1rem 2rem;border-radius:2px;font-family:'DM Sans',sans-serif;
+                       font-size:0.92rem;font-weight:500;cursor:pointer;
+                       transition:background 0.2s,transform 0.2s;margin-top:0.5rem;"
+                onmouseover="this.style.background='#d4b068';this.style.transform='translateY(-1px)'"
+                onmouseout="this.style.background='var(--dorado)';this.style.transform='translateY(0)'">
+          Enviar consulta →
+        </button>
+
+        <!-- Mensaje éxito -->
+        <div id="success-msg" style="display:none;background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.3);
+             border-radius:4px;padding:1rem;text-align:center;">
+          <p style="color:#4ade80;font-size:0.88rem;">✓ Mensaje enviado correctamente. Le responderemos en menos de 2 horas hábiles.</p>
+        </div>
+
+      </form>
+
+      <script>
+      // Mostrar mensaje de éxito si viene de envío
+      if(window.location.search.includes('enviado=true')) {
+        var msg = document.getElementById('success-msg');
+        if(msg) { msg.style.display='block'; }
+        // Limpiar URL
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+      </script>
+    </div>
+  </div>
+</section>
+
 <!-- CTA FINAL -->
 <section class="cta-final">
   <p class="section-label">Conversemos</p>
@@ -1043,7 +1205,7 @@
     <li><a href="https://www.instagram.com/akuerdos/">Instagram</a></li>
     <li><a href="https://g.page/r/CTa7L9zIYPrrEAE/review">Google Reviews</a></li>
   </ul>
-  <p class="footer-copy">© 2025 AKUERDOS Soluciones Jurídicas · Quito, Ecuador</p>
+  <p class="footer-copy">© 2026 AKUERDOS Soluciones Jurídicas · Quito, Ecuador · <a href="/politica-privacidad.html" style="color:rgba(245,240,232,0.3);text-decoration:none;">Privacidad y Cookies</a></p>
 </footer>
 
 
@@ -1062,5 +1224,81 @@
     <path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.533 5.874L0 24l6.29-1.51A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.7-.505-5.25-1.385l-.375-.214-3.893.935.988-3.78-.234-.39A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
   </svg>
 </a>
+
+<!-- ══ BANNER DE COOKIES ══ -->
+<div id="cookie-banner" style="
+  position:fixed;bottom:0;left:0;right:0;z-index:9999;
+  background:rgba(15,14,13,0.97);
+  backdrop-filter:blur(12px);
+  border-top:1px solid rgba(184,150,62,0.2);
+  padding:1.2rem 3rem;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:2rem;flex-wrap:wrap;
+  transform:translateY(0);
+  transition:transform 0.4s ease;">
+  <div style="flex:1;min-width:280px;">
+    <p style="font-size:0.82rem;color:rgba(245,240,232,0.75);line-height:1.6;">
+      Usamos cookies propias y de terceros para mejorar su experiencia y analizar el uso del sitio.
+      <a href="/politica-privacidad.html" style="color:var(--dorado);text-decoration:none;white-space:nowrap;">
+        Ver detalles →
+      </a>
+    </p>
+  </div>
+  <div style="display:flex;gap:0.8rem;flex-shrink:0;align-items:center;">
+    <button onclick="rechazarCookies()" style="
+      background:transparent;color:rgba(245,240,232,0.5);
+      border:1px solid rgba(245,240,232,0.15);
+      padding:0.55rem 1.2rem;border-radius:2px;
+      font-family:'DM Sans',sans-serif;font-size:0.8rem;
+      cursor:pointer;transition:all 0.2s;"
+      onmouseover="this.style.borderColor='rgba(245,240,232,0.4)';this.style.color='rgba(245,240,232,0.8)'"
+      onmouseout="this.style.borderColor='rgba(245,240,232,0.15)';this.style.color='rgba(245,240,232,0.5)'">
+      Rechazar opcionales
+    </button>
+    <button onclick="aceptarCookies()" style="
+      background:var(--dorado);color:var(--negro);
+      border:none;padding:0.55rem 1.4rem;border-radius:2px;
+      font-family:'DM Sans',sans-serif;font-size:0.8rem;font-weight:500;
+      cursor:pointer;transition:background 0.2s;"
+      onmouseover="this.style.background='#d4b068'"
+      onmouseout="this.style.background='var(--dorado)'">
+      Aceptar todas
+    </button>
+  </div>
+</div>
+
+<script>
+function setCookie(name, value, days) {
+  var d = new Date();
+  d.setTime(d.getTime() + (days*24*60*60*1000));
+  document.cookie = name + "=" + value + ";expires=" + d.toUTCString() + ";path=/";
+}
+function getCookie(name) {
+  var n = name + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0;i<ca.length;i++){
+    var c=ca[i].trim();
+    if(c.indexOf(n)==0) return c.substring(n.length,c.length);
+  }
+  return "";
+}
+function aceptarCookies() {
+  setCookie('akuerdos_cookies_consent', 'accepted', 365);
+  document.getElementById('cookie-banner').style.transform = 'translateY(100%)';
+  setTimeout(function(){ document.getElementById('cookie-banner').style.display='none'; }, 400);
+}
+function rechazarCookies() {
+  setCookie('akuerdos_cookies_consent', 'rejected', 365);
+  document.getElementById('cookie-banner').style.transform = 'translateY(100%)';
+  setTimeout(function(){ document.getElementById('cookie-banner').style.display='none'; }, 400);
+}
+// Mostrar solo si no ha decidido antes
+window.addEventListener('DOMContentLoaded', function() {
+  var consent = getCookie('akuerdos_cookies_consent');
+  if(consent === 'accepted' || consent === 'rejected') {
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+});
+</script>
 </body>
 </html>
