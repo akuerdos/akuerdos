@@ -105,12 +105,12 @@
   .art-autor-bio p{font-size:0.83rem;color:var(--gris);line-height:1.6}
 
   /* NAV ARTÍCULOS */
-  .art-nav{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:3rem;padding-top:2rem;border-top:1px solid #e8e2d8}
-  .art-nav a{text-decoration:none;padding:1.2rem;border:1px solid #e8e2d8;border-radius:4px;transition:border-color 0.2s}
-  .art-nav a:hover{border-color:var(--dorado)}
-  .art-nav-label{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gris);margin-bottom:0.3rem}
-  .art-nav-title{font-size:0.9rem;color:var(--negro);font-weight:500}
-  .art-nav .next{text-align:right}
+  .art-nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:2rem;padding-top:1.2rem;border-top:1px solid #e8e2d8}
+  .art-nav a{text-decoration:none;font-size:0.8rem;color:var(--gris);display:flex;align-items:center;gap:0.4rem;transition:color 0.2s;max-width:45%}
+  .art-nav a:hover{color:var(--dorado)}
+  .art-nav-label{display:none}
+  .art-nav-title{font-size:0.8rem;color:inherit;font-weight:400;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .art-nav .next{text-align:right;justify-content:flex-end}
 
   /* FOOTER */
   footer{background:#080807;padding:2.5rem 4rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(184,150,62,0.15)}
@@ -235,16 +235,7 @@
     </div>
   </div>
 
-  <nav class="art-nav">
-    <a href="/blog/error-comprar-inmueble-ecuador" class="prev">
-      <p class="art-nav-label">← Artículo anterior</p>
-      <p class="art-nav-title">El error más común al comprar un inmueble</p>
-    </a>
-    <a href="/blog/glosa-contraloria-como-defenderme" class="next">
-      <p class="art-nav-label">Siguiente artículo →</p>
-      <p class="art-nav-title">¿Qué es una glosa de la Contraloría?</p>
-    </a>
-  </nav>
+  <nav class="art-nav"><a href="/blog/error-comprar-inmueble-ecuador" class="prev">← <span class="art-nav-title">El error más común al comprar un inmueble</span></a><a href="/blog/glosa-contraloria-como-defenderme" class="next"><span class="art-nav-title">¿Qué es una glosa de la Contraloría?</span> →</a></nav>
 </main>
 
 <footer>
