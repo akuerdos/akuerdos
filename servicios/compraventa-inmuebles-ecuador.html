@@ -80,8 +80,8 @@ footer{background:#080807;padding:2.5rem 4rem;display:flex;justify-content:space
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
 .hamburger.open span:nth-child(2){opacity:0;}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(15,14,13,0.98);backdrop-filter:blur(12px);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;transition:opacity 0.3s;}
-.mobile-menu.open{display:flex;opacity:1;}
+.mobile-menu{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(15,14,13,0.98);backdrop-filter:blur(12px);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;transition:opacity 0.3s;;display:flex;opacity:0;pointer-events:none}
+.mobile-menu.open{opacity:1;pointer-events:all}
 .mobile-menu a{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--crema);text-decoration:none;transition:color 0.2s;}
 .mobile-menu a:hover{color:var(--dorado);}
 .mobile-menu .mc{background:var(--dorado);color:var(--negro)!important;font-family:'DM Sans',sans-serif!important;font-size:1rem!important;padding:1rem 2.5rem;border-radius:2px;margin-top:1rem;font-weight:500;}
@@ -110,7 +110,7 @@ footer{background:#080807;padding:2.5rem 4rem;display:flex;justify-content:space
   <a href="https://wa.me/593999923564?text=Hola%2C%20estuve%20revisando%20la%20p%C3%A1gina%20de%20Compraventa%20de%20Inmuebles%20en%20AKUERDOS%20y%20necesito%20asesor%C3%ADa%20para%20proteger%20mi%20operaci%C3%B3n%20inmobiliaria.%20Mi%20caso%20es%20el%20siguiente%3A%20" class="mc" onclick="closeMobileMenu()">WhatsApp directo</a>
 </div>
 <script>
-function toggleMenu(){var m=document.getElementById('mobileMenu'),b=document.getElementById('hbtn');m.classList.toggle('open');b.classList.toggle('open');document.body.style.overflow=m.classList.contains('open')?'hidden':'';}
+function toggleMenu(){var m=document.getElementById('mobileMenu'),b=document.getElementById('hbtn');if(m.classList.contains('open')){m.classList.remove('open');if(b)b.classList.remove('open');document.body.style.overflow='';}else{m.classList.add('open');if(b)b.classList.add('open');document.body.style.overflow='hidden';}}
 function closeMobileMenu(){var m=document.getElementById('mobileMenu'),b=document.getElementById('hbtn');m.classList.remove('open');b.classList.remove('open');document.body.style.overflow='';}
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMobileMenu();});
 </script>
