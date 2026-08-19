@@ -142,6 +142,41 @@
     <priority>0.9</priority>
   </url>
 
+  <url>
+    <loc>https://www.akuerdos.com/blog/cuando-demandar-deudor-ecuador.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.akuerdos.com/blog/riesgos-legales-contratar-estado-ecuador.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.akuerdos.com/blog/visto-bueno-ecuador-guia-empleador.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.akuerdos.com/servicios/estructuracion-tributaria-inmobiliaria.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.akuerdos.com/servicios/due-diligence-aldcft-ecuador.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Política de privacidad -->
   <url>
     <loc>https://www.akuerdos.com/politica-privacidad.html</loc>
