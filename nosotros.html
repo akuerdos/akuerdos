@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosotros | Akuerdos Abogados — Dr. Santiago Orbe Cajiao</title>
+<meta name="description" content="Conoce a Akuerdos Abogados. Dr. Santiago Orbe Cajiao, abogado con más de 20 años de experiencia en derecho ecuatoriano, especialista en Contraloría, inmobiliario y corporativo.">
+<meta property="og:title" content="Nosotros — Akuerdos Abogados">
+<meta property="og:site_name" content="Akuerdos Abogados">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --negro: #0f0e0d;
+    --crema: #f5f0e8;
+    --dorado: #b8963e;
+    --dorado-claro: #d4b068;
+    --gris: #6b6560;
+    --blanco: #fdfaf5;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--blanco); color: var(--negro); overflow-x: hidden; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.2rem 4rem;
+    background: rgba(15,14,13,0.95);
+    backdrop-filter: blur(8px);
+  }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--dorado); letter-spacing: 0.15em; text-decoration: none; }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { color: var(--crema); text-decoration: none; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.8; transition: opacity 0.2s; }
+  .nav-links a:hover { opacity: 1; color: var(--dorado-claro); }
+  .nav-links a.active { opacity: 1; color: var(--dorado); }
+  .nav-cta { background: var(--dorado); color: var(--negro) !important; padding: 0.55rem 1.4rem; border-radius: 2px; font-weight: 500; opacity: 1 !important; }
+  .nav-cta:hover { background: var(--dorado-claro) !important; }
+
+  .page-header {
+    background: var(--negro);
+    padding: 9rem 4rem 5rem;
+    text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .page-header::before {
+    content: ''; position: absolute; top: -20%; left: 50%; transform: translateX(-50%);
+    width: 700px; height: 400px;
+    background: radial-gradient(ellipse, rgba(184,150,62,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .page-header-eyebrow { font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--dorado); margin-bottom: 1.5rem; }
+  .page-header h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 4vw, 3.6rem); color: var(--crema); line-height: 1.15; margin-bottom: 1.2rem; }
+  .page-header h1 em { font-style: italic; color: var(--dorado-claro); }
+  .page-header p { font-size: 1.05rem; color: rgba(245,240,232,0.65); max-width: 560px; margin: 0 auto; line-height: 1.7; }
+
+  section { padding: 5rem 4rem; }
+  .section-label { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--dorado); margin-bottom: 1rem; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1.2; margin-bottom: 1rem; }
+
+  /* BIO SECTION */
+  .bio-section { background: var(--blanco); }
+  .bio-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 5rem; align-items: start; }
+  .bio-left {}
+  .bio-badge {
+    background: var(--negro);
+    color: var(--crema);
+    padding: 2.5rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+  }
+  .bio-badge-name { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--crema); margin-bottom: 0.3rem; }
+  .bio-badge-title { font-size: 0.82rem; color: var(--dorado); letter-spacing: 0.05em; margin-bottom: 1.2rem; }
+  .bio-badge-line { font-size: 0.82rem; color: rgba(245,240,232,0.5); margin: 0.3rem 0; }
+  .bio-badge-line strong { color: rgba(245,240,232,0.8); }
+  .bio-right {}
+  .bio-lead { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--negro); line-height: 1.55; margin-bottom: 1.8rem; font-style: italic; }
+  .bio-text { font-size: 0.95rem; color: var(--gris); line-height: 1.8; margin-bottom: 1.2rem; }
+
+  /* STATS */
+  .stats-section { background: var(--negro); }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+  .stat-box { text-align: center; padding: 2rem 1rem; border: 1px solid rgba(184,150,62,0.15); border-radius: 4px; }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--dorado-claro); line-height: 1; margin-bottom: 0.5rem; }
+  .stat-label { font-size: 0.82rem; color: rgba(245,240,232,0.5); line-height: 1.5; }
+
+  /* FORMACION */
+  .formacion-section { background: var(--crema); }
+  .formacion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .formacion-block h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 1.5rem; color: var(--negro); }
+  .formacion-item { padding: 1.2rem 0; border-bottom: 1px solid rgba(107,101,96,0.15); }
+  .formacion-item:last-child { border-bottom: none; }
+  .formacion-degree { font-size: 0.95rem; font-weight: 500; color: var(--negro); margin-bottom: 0.2rem; }
+  .formacion-inst { font-size: 0.85rem; color: var(--gris); }
+  .formacion-year { font-size: 0.78rem; color: var(--dorado); margin-top: 0.2rem; }
+
+  /* VALORES */
+  .valores-section { background: var(--negro); }
+  .valores-section .section-title { color: var(--crema); }
+  .valores-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+  .valor-card { background: rgba(245,240,232,0.04); border: 1px solid rgba(184,150,62,0.15); border-radius: 4px; padding: 2rem; }
+  .valor-icon { font-size: 1.8rem; margin-bottom: 1rem; }
+  .valor-card h4 { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--crema); margin-bottom: 0.6rem; }
+  .valor-card p { font-size: 0.86rem; color: rgba(245,240,232,0.55); line-height: 1.7; }
+
+  /* CTA */
+  .cta-section { background: var(--crema); text-align: center; }
+  .cta-section p { font-size: 1rem; color: var(--gris); margin-bottom: 2.5rem; max-width: 500px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+  .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn-primary { background: var(--dorado); color: var(--negro); padding: 0.9rem 2.2rem; border: none; border-radius: 2px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500; letter-spacing: 0.05em; cursor: pointer; text-decoration: none; transition: background 0.2s, transform 0.2s; display: inline-block; }
+  .btn-primary:hover { background: var(--dorado-claro); transform: translateY(-1px); }
+  .btn-outline { background: transparent; color: var(--negro); padding: 0.9rem 2.2rem; border: 1px solid rgba(15,14,13,0.3); border-radius: 2px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; letter-spacing: 0.05em; cursor: pointer; text-decoration: none; transition: border-color 0.2s; display: inline-block; }
+  .btn-outline:hover { border-color: var(--dorado); color: var(--dorado); }
+
+  footer { background: var(--negro); padding: 3rem 4rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--dorado); letter-spacing: 0.15em; }
+  .footer-copy { font-size: 0.8rem; color: rgba(245,240,232,0.35); }
+  .footer-links { display: flex; gap: 2rem; }
+  .footer-links a { font-size: 0.8rem; color: rgba(245,240,232,0.4); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--dorado); }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--crema); border-radius: 2px; }
+
+  @media (max-width: 900px) {
+    nav { padding: 1.2rem 1.5rem; }
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(15,14,13,0.98); padding: 1.5rem; gap: 1.2rem; }
+    .nav-links.open { display: flex; }
+    .hamburger { display: flex; }
+    .page-header { padding: 7rem 1.5rem 3.5rem; }
+    section { padding: 3.5rem 1.5rem; }
+    .bio-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .formacion-grid { grid-template-columns: 1fr; }
+    .valores-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; text-align: center; padding: 2.5rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">AKUERDOS</a>
+  <button class="hamburger" aria-label="Menú" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="nosotros.html" class="active">Nosotros</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#contacto" class="nav-cta">Consulta</a></li>
+  </ul>
+</nav>
+
+<header class="page-header">
+  <p class="page-header-eyebrow">Akuerdos Abogados — Cumbayá, Quito</p>
+  <h1>Derecho con <em>experiencia</em><br>y visión estratégica</h1>
+  <p>Más de dos décadas protegiendo patrimonios, empresas y derechos ciudadanos frente a las complejidades del sistema jurídico ecuatoriano.</p>
+</header>
+
+<!-- BIO -->
+<section class="bio-section">
+  <div class="bio-grid">
+    <div class="bio-left">
+      <div class="bio-badge">
+        <div class="bio-badge-name">Dr. Santiago Orbe Cajiao</div>
+        <div class="bio-badge-title">Fundador — Akuerdos Abogados</div>
+        <div class="bio-badge-line"><strong>Matrícula:</strong> Foro 17-2001-560</div>
+        <div class="bio-badge-line"><strong>CAP:</strong> N.º 7407</div>
+        <div class="bio-badge-line"><strong>Federación:</strong> Abogados del Ecuador</div>
+        <div class="bio-badge-line"><strong>Sede:</strong> Cumbayá, Quito</div>
+      </div>
+    </div>
+    <div class="bio-right">
+      <div class="section-label">Quiénes somos</div>
+      <h2 class="section-title">Una trayectoria construida<br>desde adentro del Estado</h2>
+      <p class="bio-lead">"Entiendo cómo opera la administración pública porque la dirigí por 14 años. Eso cambia la forma en que defiendo a mis clientes."</p>
+      <p class="bio-text">El Dr. Santiago Orbe Cajiao es abogado independiente con más de 20 años de experiencia en derecho ecuatoriano. Fundador de Akuerdos Abogados, firma especializada en derecho inmobiliario, corporativo, laboral, sucesoral y defensa ante la Contraloría General del Estado.</p>
+      <p class="bio-text">Antes de ejercer la abogacía independiente, desempeñó por 14 años el cargo de Director de Auditoría Interna en nueve instituciones públicas de primer nivel: SRI, BIESS, EP Petroecuador y SCPM, entre otras. Esta experiencia le otorga una perspectiva interna inigualable sobre los procesos de control gubernamental, la responsabilidad de los servidores públicos y las estrategias de defensa más efectivas frente a la CGE.</p>
+      <p class="bio-text">Doctor en Jurisprudencia por la PUCE y especialista en Gestión Empresarial por la UASB, ejerce con rigor académico y profundo conocimiento práctico del sistema jurídico ecuatoriano.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ESTADÍSTICAS -->
+<section class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-box">
+      <div class="stat-num">20+</div>
+      <div class="stat-label">Años de ejercicio profesional</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">14</div>
+      <div class="stat-label">Años como Director de Auditoría en instituciones públicas</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">9</div>
+      <div class="stat-label">Instituciones del Estado dirigidas</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">5+</div>
+      <div class="stat-label">Áreas del derecho atendidas</div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMACIÓN -->
+<section class="formacion-section">
+  <div class="section-label">Trayectoria académica y profesional</div>
+  <h2 class="section-title">Formación y credenciales</h2>
+
+  <div class="formacion-grid">
+    <div class="formacion-block">
+      <h3>Formación académica</h3>
+      <div class="formacion-item">
+        <div class="formacion-degree">Doctor en Jurisprudencia</div>
+        <div class="formacion-inst">Pontificia Universidad Católica del Ecuador — PUCE</div>
+      </div>
+      <div class="formacion-item">
+        <div class="formacion-degree">Especialización en Gestión Empresarial</div>
+        <div class="formacion-inst">Universidad Andina Simón Bolívar — UASB</div>
+      </div>
+    </div>
+
+    <div class="formacion-block">
+      <h3>Habilitaciones profesionales</h3>
+      <div class="formacion-item">
+        <div class="formacion-degree">Matrícula Profesional</div>
+        <div class="formacion-inst">Foro No. 17-2001-560 — Federación de Abogados del Ecuador</div>
+      </div>
+      <div class="formacion-item">
+        <div class="formacion-degree">Colegio de Abogados de Pichincha</div>
+        <div class="formacion-inst">CAP N.º 7407</div>
+      </div>
+      <div class="formacion-item">
+        <div class="formacion-degree">Experiencia pública</div>
+        <div class="formacion-inst">Director de Auditoría Interna — SRI, BIESS, EP Petroecuador, SCPM y otras (14 años)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALORES -->
+<section class="valores-section">
+  <div class="section-label">Nuestra filosofía</div>
+  <h2 class="section-title">Lo que nos distingue</h2>
+
+  <div class="valores-grid">
+    <div class="valor-card">
+      <div class="valor-icon">🎯</div>
+      <h4>Conocimiento desde adentro</h4>
+      <p>14 años en el sector público nos dan una ventaja real: entendemos cómo piensan los organismos de control y cómo construir defensas efectivas.</p>
+    </div>
+    <div class="valor-card">
+      <div class="valor-icon">📋</div>
+      <h4>Análisis sin eufemismos</h4>
+      <p>Le decimos exactamente qué tan fuerte es su caso, qué riesgos enfrenta y qué opciones reales tiene, sin suavizar la realidad.</p>
+    </div>
+    <div class="valor-card">
+      <div class="valor-icon">🤝</div>
+      <h4>Atención directa</h4>
+      <p>Usted trabaja directamente con el Dr. Orbe Cajiao. No con pasantes ni asistentes. La estrategia la define quien tiene la experiencia.</p>
+    </div>
+    <div class="valor-card">
+      <div class="valor-icon">⚡</div>
+      <h4>Agilidad estratégica</h4>
+      <p>Firma pequeña, respuesta rápida. Tomamos decisiones y nos movemos con la agilidad que los casos complejos exigen.</p>
+    </div>
+    <div class="valor-card">
+      <div class="valor-icon">🔍</div>
+      <h4>Rigurosidad normativa</h4>
+      <p>Cada argumento se construye sobre norma verificada y jurisprudencia real. No especulamos: citamos.</p>
+    </div>
+    <div class="valor-card">
+      <div class="valor-icon">🏛️</div>
+      <h4>Raíces en Quito</h4>
+      <p>Conocemos los juzgados, los procesos y las instituciones del DMQ. Operamos donde su caso necesita resultados.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="section-label">¿Necesita asesoría?</div>
+  <h2 class="section-title">Cuéntenos su caso</h2>
+  <p>La orientación inicial es gratuita. Evaluamos su situación y le decimos si podemos ayudarle.</p>
+  <div class="cta-buttons">
+    <a href="https://wa.me/593999999999?text=Hola,%20necesito%20asesoría%20jurídica" class="btn-primary" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    <a href="servicios.html" class="btn-outline">Ver servicios</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">AKUERDOS</div>
+  <div class="footer-links">
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#contacto">Contacto</a>
+  </div>
+  <p class="footer-copy">© 2026 Akuerdos Abogados — Cumbayá, Quito</p>
+</footer>
+
+</body>
+</html>
