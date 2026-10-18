@@ -485,7 +485,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMobileM
         </div>
         <div>
           <label style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gris);display:block;margin-bottom:0.4rem;">Teléfono / WhatsApp</label>
-          <input type="tel" name="phone" placeholder="+593 99 000 0000" style="width:100%;border:1px solid #e8e2d8;border-radius:2px;padding:0.85rem 1rem;font-family:'DM Sans',sans-serif;font-size:0.92rem;outline:none;background:white;transition:border-color 0.2s;" onfocus="this.style.borderColor='#b8963e'" onblur="this.style.borderColor='#e8e2d8'">
+          <input type="tel" name="phone" placeholder="Ej: 099 123 4567" style="width:100%;border:1px solid #e8e2d8;border-radius:2px;padding:0.85rem 1rem;font-family:'DM Sans',sans-serif;font-size:0.92rem;outline:none;background:white;transition:border-color 0.2s;" onfocus="this.style.borderColor='#b8963e'" onblur="this.style.borderColor='#e8e2d8'">
         </div>
         <div>
           <label style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gris);display:block;margin-bottom:0.4rem;">Tipo de operación *</label>
@@ -529,5 +529,26 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMobileM
 <!-- WhatsApp flotante -->
 <a href="https://wa.me/593999923564?text=Hola%2C%20estuve%20revisando%20la%20p%C3%A1gina%20de%20Compraventa%20de%20Inmuebles%20en%20AKUERDOS%20y%20necesito%20asesor%C3%ADa%20para%20proteger%20mi%20operaci%C3%B3n%20inmobiliaria.%20Mi%20caso%20es%20el%20siguiente%3A%20" target="_blank" style="position:fixed;bottom:2rem;right:2rem;z-index:999;background:#25D366;border-radius:50%;width:58px;height:58px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" title="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.533 5.874L0 24l6.29-1.51A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.7-.505-5.25-1.385l-.375-.214-3.893.935.988-3.78-.234-.39A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></a>
 
+<script>
+/* Envío AJAX de formularios Web3Forms: evita la página en blanco y muestra el aviso en la misma página */
+document.querySelectorAll('form[action*="web3forms"]').forEach(function(f){
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var btn=f.querySelector('button[type="submit"],button:not([type])');
+    var txt=btn?btn.innerHTML:'';
+    if(btn){btn.disabled=true;btn.innerHTML='Enviando…';}
+    var data=Object.fromEntries(new FormData(f)); delete data.redirect;
+    var ok=f.querySelector('[id^="success"],[id^="ok"]');
+    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){return r.json();})
+      .then(function(j){
+        if(j.success){ f.reset(); if(ok){ok.style.display='block';ok.scrollIntoView({behavior:'smooth',block:'center'});} }
+        else { throw new Error(j.message||'error'); }
+      })
+      .catch(function(){ alert('No se pudo enviar su consulta. Por favor escríbanos por WhatsApp al +593 99 992 3564.'); })
+      .finally(function(){ if(btn){btn.disabled=false;btn.innerHTML=txt;} });
+  });
+});
+</script>
 </body>
 </html>
