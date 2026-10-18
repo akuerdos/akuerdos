@@ -1448,7 +1448,7 @@
           <label style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,240,232,0.4);display:block;margin-bottom:0.5rem;">
             Teléfono / WhatsApp
           </label>
-          <input type="tel" name="phone" placeholder="+593 99 000 0000"
+          <input type="tel" name="phone" placeholder="Ej: 099 123 4567"
                  style="width:100%;background:rgba(245,240,232,0.05);border:1px solid rgba(245,240,232,0.12);
                         border-radius:2px;padding:0.85rem 1rem;color:var(--crema);font-family:'DM Sans',sans-serif;
                         font-size:0.92rem;outline:none;transition:border-color 0.2s;"
@@ -1676,6 +1676,27 @@ window.addEventListener('DOMContentLoaded', function() {
   if(consent === 'accepted' || consent === 'rejected') {
     document.getElementById('cookie-banner').style.display = 'none';
   }
+});
+</script>
+<script>
+/* Envío AJAX de formularios Web3Forms: evita la página en blanco y muestra el aviso en la misma página */
+document.querySelectorAll('form[action*="web3forms"]').forEach(function(f){
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var btn=f.querySelector('button[type="submit"],button:not([type])');
+    var txt=btn?btn.innerHTML:'';
+    if(btn){btn.disabled=true;btn.innerHTML='Enviando…';}
+    var data=Object.fromEntries(new FormData(f)); delete data.redirect;
+    var ok=f.querySelector('[id^="success"],[id^="ok"]');
+    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){return r.json();})
+      .then(function(j){
+        if(j.success){ f.reset(); if(ok){ok.style.display='block';ok.scrollIntoView({behavior:'smooth',block:'center'});} }
+        else { throw new Error(j.message||'error'); }
+      })
+      .catch(function(){ alert('No se pudo enviar su consulta. Por favor escríbanos por WhatsApp al +593 99 992 3564.'); })
+      .finally(function(){ if(btn){btn.disabled=false;btn.innerHTML=txt;} });
+  });
 });
 </script>
 </body>
