@@ -93,13 +93,13 @@ Una vez partidos los bienes, cada heredero inscribe a su nombre los inmuebles en
 
 ### ¿Cuánto cuesta tramitar una herencia en Ecuador?
 
-Los costos varían según la complejidad, pero incluyen: honorarios del abogado, honorarios notariales, impuesto al SRI (si aplica), inscripciones en el Registro de la Propiedad y tasas judiciales (si va por esa vía). En general, una sucesión sencilla por vía notarial puede resolverse entre $800 y $2.500 en honorarios profesionales.
+Los costos varían según la complejidad, pero incluyen: honorarios del abogado, honorarios notariales, impuesto al SRI (si aplica), inscripciones en el Registro de la Propiedad y tasas judiciales (si va por esa vía). Los honorarios profesionales dependen de la complejidad de cada sucesión y se acuerdan por escrito antes de iniciar.
 
 ---
 
 ### ¿Tiene preguntas sobre una herencia?
 
-En AKUERDOS tramitamos sucesiones en Quito y a nivel nacional. La primera consulta es gratuita.
+En AKUERDOS tramitamos sucesiones en Quito y a nivel nacional.
 
 📞 WhatsApp: +593 99 992 3564
 🌐 akuerdos.com
@@ -301,7 +301,7 @@ En AKUERDOS lo hacemos antes de que usted firme. No después.
 
 ### ¿Va a comprar o vender un inmueble?
 
-Conversemos antes de firmar. La primera consulta es gratuita.
+Conversemos antes de firmar.
 
 📞 WhatsApp: +593 99 992 3564
 🌐 akuerdos.com
