@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.akuerdos.com/sitemap.xml
+Sitemap: https://akuerdos.com/sitemap.xml
