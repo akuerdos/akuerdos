@@ -30,7 +30,10 @@
     background: rgba(15,14,13,0.95);
     backdrop-filter: blur(8px);
   }
-  .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--dorado); letter-spacing: 0.15em; text-decoration: none; }
+  .nav-logo { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; }
+  .nav-logo-text { display: flex; flex-direction: column; line-height: 1; }
+  .nav-logo-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--crema); letter-spacing: 0.18em; }
+  .nav-logo-sub { font-size: 0.58rem; color: var(--dorado); letter-spacing: 0.28em; text-transform: uppercase; margin-top: 0.15rem; }
   .nav-links { display: flex; gap: 2.5rem; list-style: none; }
   .nav-links a { color: var(--crema); text-decoration: none; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.8; transition: opacity 0.2s; }
   .nav-links a:hover { opacity: 1; color: var(--dorado-claro); }
@@ -86,7 +89,7 @@
   .atencion-section { background: var(--negro); }
   .atencion-section .section-title { color: var(--crema); }
   .atencion-section .section-subtitle { color: rgba(245,240,232,0.6); }
-  .levels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .levels-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
   .level-card {
     background: rgba(245,240,232,0.04);
     border: 1px solid rgba(184,150,62,0.2);
@@ -147,7 +150,13 @@
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo">AKUERDOS</a>
+  <a href="index.html" class="nav-logo">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAFLUlEQVR42u3ZT4gcVR7A8e/vvarq6T9jQoxmENaoy6oIQbwYIUoIErEnoOhONyyLaLyJ0YNnsacRxKMHERL/IuxhpzcbxY2TiYhRXMzKIqwHURzWXELU+Gcy0zM9XVXvPQ81GR0TInpIjzO/D9Spq169/tXv/alfgVJKKaWUUkoppZRSSimllFK/QFZnt4LQQvikU/TvhkagTQAJ+sgupDFhaUzY3/z7AESrJ+PGhXbTAXDXa8M4ew3e17BOCGGOvjtBp3kGgFbL0B5fFRk5+CHcahnabQ9A/fXdGNlLyHci5grELMXXAXwJ8m+8f5HJeyfPuXZdBrAxYek0HaMTI0jyLCb+M8aCWwTvAM4GxyAWbAkI4LKD5LOPMHXfKVrB0Ba//gJ49o/f8bfrSWqHseVrSOccgocgBFnZNwnFkA0YkmFLvvgF+WKdqeZng8zEAQWwZWA8MHp4C5IfxyZbyRYyhBiTgInPf5nPwKcQyIgrMS49gZFbeOOj08UJFz+IZjDxG6fIpsUXiCpng+eJyjkuewXX207e3UHevWXp2IHrbcdlrxCVcwRPNp8RV64iTw9A2xdtXnxmIPNeWzz1Tp24uodsNsfYmLhWItkQQRjB+S3AyIrD+S0QRkg2RMS1EiaKSWdz4upd3HnodtriB7HFGeA2xuyDEBBr8P4r8u4T9LsOCUOI/RPB/2wONAHcv+h++Q8sFs+TGLsZJGD8PuDtdTAHBgEJ7H71cqLKNMYOgwS8OwFyJz4v+hNw5+9t30IJTBTAT2GircWC474jtn/k9Xtmlu+xJjOw0TF0cJjydUSlYfJFjy0ZxF8J/jms+eLCDZTPPoirwfwBMYJLPTbeRO6uBT5cvseaHsKRVIpRnEDw/ycP93J07H+/qo09B28kuEOYeCtiwOW19fMqJyaAgIjBZ3vpX/oZ9c7L2NJl+PR6qn4b8+YxhP8U2xe5GRs/g08/xiSf4vqn6c4+RLm6l6h8DAjnzJlrehvj/HyRNf0Z3hx7j+p3bYY23Y/LThLMceZqNWAzwVTx1EA2089qBHMcl51kaNP9VIbHOdJ8F7c4g1jB0Fv7Aew0io1uFE+T9RYwcZXdr1YJfppkg0C4GUkP4HoCkoLJweQYnxa9dfshbC/O9dPsnKhhkip5bx5f/XzFPdZmBkqgFQxv3P0VEt6ntDEmrj7NZON5uqd34WWUEI39uGh7KQ4RhiLByxhZOkr31C4mmy9QjZ6mtDEG3uPI6GlawVzsCs3FH8LHxs3SVuUAbhFMtI/6PycJ3Zsw8jwmeoSNbgb8T+dnSxbPYONHSUr7CYs3UT94BGMfJl8AZP+Kttf8u3CrZWAcPjx4jLhyGz6HqAzBQzqXEiqXYOafIth3CF4wspP52cepXnKGuJYgBvJe8c6cdd9hcux2WsggqjKDWUQYh7YEnH8Qn34PAfpnemQL7hceqpAtOPpnigXD9b/B5w8ut7luVuG2eFpBONqcJkv3gHxLXC1DAC64CXYQIKmWga/xWZ2pv5wosm8w5awBZeBSEBsTlqnmB6Rzt+LTYyQ1i02Glt76PBJCceApbwmYeIikZsmzt0hndjDZ+O9ycWJABvtNpNN0S1XpT4Fd7HntrxAeoDcsVBYqBBMTEIJUGO4a5pOj5PMvcfievy9XdjpNx7rXaplzig71Q9sYnRhhdGKE+qFtRZHgp0WJltHAna9WuCJQ56nmrLLPmqs8K4MUnzw125RSSimllFJKKaWUUkoppZRSSimllFJKKaV+N34A56EgE/RKyEAAAAAASUVORK5CYII=" alt="Akuerdos Abogados" style="height:48px;width:48px;object-fit:contain;" />
+              <span class="nav-logo-text">
+                <span class="nav-logo-name">AKUERDOS</span>
+                <span class="nav-logo-sub">ABOGADOS</span>
+              </span>
+            </a>
   <button class="hamburger" aria-label="Menú" onclick="document.querySelector('.nav-links').classList.toggle('open')">
     <span></span><span></span><span></span>
   </button>
@@ -281,57 +290,68 @@
   </div>
 </section>
 
-<!-- NIVELES DE ATENCIÓN -->
+<!-- CÓMO TRABAJAMOS -->
 <section class="atencion-section">
   <div class="section-label">Cómo trabajamos</div>
-  <h2 class="section-title" style="color:var(--crema)">Tres formas de comenzar</h2>
-  <p class="section-subtitle">Elija el nivel que corresponde a su situación. Sin compromiso hasta que usted decida avanzar.</p>
+  <h2 class="section-title" style="color:var(--crema)">Así comenzamos a trabajar juntos</h2>
+  <p class="section-subtitle">Un proceso claro, sin sorpresas. Usted decide en qué momento avanzar.</p>
 
-  <div class="levels-grid">
+  <div class="levels-grid" style="grid-template-columns: repeat(4, 1fr);">
 
     <div class="level-card">
-      <div class="level-badge">Nivel 1</div>
-      <h3>Consulta de Viabilidad</h3>
-      <div class="level-price">Sin costo</div>
-      <p class="level-desc">Cuéntenos brevemente su situación por <strong>mensaje de WhatsApp</strong>. Le presentamos el equipo, absolvemos sus inquietudes iniciales e indicamos si existe vía legal.</p>
-      <div class="level-includes">Incluye:</div>
+      <div class="level-badge">Paso 1</div>
+      <h3>Cuéntenos su situación</h3>
+      <div class="level-price" style="color:var(--dorado-claro); font-size:0.9rem; font-weight:400;">Sin costo · Por WhatsApp</div>
+      <p class="level-desc">Escríbanos brevemente qué le ocurre. Le respondemos en menos de 2 horas hábiles: confirmamos si su caso tiene vía legal y le explicamos el siguiente paso.</p>
+      <div class="level-includes">En este paso:</div>
       <ul class="level-list">
-        <li>Respuesta en menos de 2 horas hábiles</li>
-        <li>Presentación del equipo profesional</li>
-        <li>Indicación de viabilidad legal</li>
-        <li>Recomendación del paso siguiente</li>
+        <li>Usted describe su situación en sus propias palabras</li>
+        <li>Evaluamos si podemos ayudarle</li>
+        <li>Le indicamos el tipo de servicio que corresponde</li>
+        <li>Sin compromiso de ningún tipo</li>
       </ul>
-      <div class="level-includes no-list" style="margin-top:0.6rem; color:var(--gris); font-size:0.8rem;">No incluye revisión de documentos ni estrategia</div>
     </div>
 
     <div class="level-card featured">
-      <div class="level-badge">Nivel 2</div>
-      <h3>Consulta Legal</h3>
-      <div class="level-price">$50 + IVA</div>
-      <p class="level-desc">Reunión virtual o presencial con el equipo. Analizamos su caso en profundidad, definimos la estrategia y establecemos los alcances del servicio.</p>
-      <div class="level-includes">Incluye:</div>
+      <div class="level-badge">Paso 2</div>
+      <h3>Consulta jurídica formal</h3>
+      <div class="level-price" style="font-size:0.9rem; font-weight:400;">Virtual o presencial · Honorario acordado previamente</div>
+      <p class="level-desc">Nos reunimos para analizar su caso en profundidad. Usted recibe una opinión jurídica fundada y opciones de estrategia. El honorario se acredita si continúa con nosotros.</p>
+      <div class="level-includes">En este paso:</div>
       <ul class="level-list">
-        <li>Reunión telemática o presencial</li>
-        <li>Análisis del caso y opciones legales</li>
-        <li>Definición de estrategia</li>
-        <li>Propuesta de honorarios por escrito</li>
+        <li>Análisis completo de su situación legal</li>
+        <li>Opinión jurídica con opciones concretas</li>
+        <li>Estrategia recomendada para su caso</li>
+        <li>Definición del alcance del análisis documental</li>
       </ul>
-      <div class="level-includes no-list" style="margin-top:0.8rem; color:var(--dorado-claro); font-size:0.82rem;">✓ Se acredita en el Nivel 3 si contrata el análisis documental</div>
+    </div>
+
+    <div class="level-card featured">
+      <div class="level-badge">Paso 3</div>
+      <h3>Análisis documental del caso</h3>
+      <div class="level-price" style="font-size:0.9rem; font-weight:400;">Honorario acordado previamente</div>
+      <p class="level-desc">Revisamos la documentación de su caso: escrituras, contratos, títulos, expedientes u otros instrumentos relevantes. Este análisis nos permite elaborar una propuesta de servicios precisa y realista.</p>
+      <div class="level-includes">En este paso:</div>
+      <ul class="level-list">
+        <li>Revisión técnica de los documentos del caso</li>
+        <li>Identificación de fortalezas y riesgos jurídicos</li>
+        <li>Elaboración de propuesta de servicios detallada</li>
+        <li>Sin este análisis no hay propuesta responsable</li>
+      </ul>
     </div>
 
     <div class="level-card">
-      <div class="level-badge">Nivel 3</div>
-      <h3>Análisis Documental del Caso</h3>
-      <div class="level-price">Desde $80 + IVA</div>
-      <p class="level-desc">Revisión completa de documentos, identificación de riesgos e informe jurídico escrito. El valor se confirma en la consulta previa según el alcance del análisis.</p>
-      <div class="level-includes">Incluye:</div>
+      <div class="level-badge">Paso 4</div>
+      <h3>Contratación del servicio</h3>
+      <div class="level-price" style="color:var(--dorado-claro); font-size:0.9rem; font-weight:400;">Honorario definido por escrito</div>
+      <p class="level-desc">Si decide avanzar, firmamos contrato con alcance, plazos y honorarios claramente establecidos. Nada se inicia sin su autorización expresa.</p>
+      <div class="level-includes">En este paso:</div>
       <ul class="level-list">
-        <li>Revisión de todos los documentos relevantes</li>
-        <li>Análisis de riesgos y fortalezas del caso</li>
-        <li>Informe jurídico escrito</li>
-        <li>Estrategia con opciones concretas</li>
+        <li>Contrato de servicios por escrito</li>
+        <li>Honorarios fijos o acordados por etapas</li>
+        <li>Comunicación directa con su abogado</li>
+        <li>Informes de avance periódicos</li>
       </ul>
-      <div class="level-includes no-list" style="margin-top:0.8rem; color:var(--gris); font-size:0.82rem;">Procesos judiciales desde $200 + IVA · Honorario confirmado en la consulta previa</div>
     </div>
 
   </div>
@@ -339,11 +359,11 @@
 
 <!-- CTA -->
 <section class="cta-section">
-  <div class="section-label">¿Listo para proteger su patrimonio?</div>
-  <h2 class="section-title">Conversemos sobre su caso</h2>
-  <p>La orientación inicial es gratuita. Cuéntenos su situación y le diremos si podemos ayudarle.</p>
+  <div class="section-label">El primer paso no tiene costo</div>
+  <h2 class="section-title">Cuéntenos qué le preocupa</h2>
+  <p>Escríbanos por WhatsApp. Le respondemos, le presentamos el equipo y le decimos con claridad si podemos ayudarle. Sin compromiso.</p>
   <div class="cta-buttons">
-    <a href="https://wa.me/593999923564?text=Hola,%20necesito%20asesor%C3%ADa%20jur%C3%ADdica" class="btn-primary" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    <a href="https://wa.me/593999923564?text=Hola,%20necesito%20orientaci%C3%B3n%20legal%20sobre%20mi%20situaci%C3%B3n" class="btn-primary" target="_blank" rel="noopener">Escribir por WhatsApp</a>
   </div>
 </section>
 
