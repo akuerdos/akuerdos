@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios Jurídicos | Akuerdos Abogados — Quito Ecuador</title>
+<meta name="description" content="Servicios legales especializados en derecho inmobiliario, corporativo, laboral, sucesoral y defensa ante la Contraloría. Akuerdos Abogados, Quito.">
+<meta property="og:title" content="Servicios — Akuerdos Abogados">
+<meta property="og:description" content="Protegemos su patrimonio con más de 20 años de experiencia en derecho ecuatoriano.">
+<meta property="og:site_name" content="Akuerdos Abogados">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --negro: #0f0e0d;
+    --crema: #f5f0e8;
+    --dorado: #b8963e;
+    --dorado-claro: #d4b068;
+    --gris: #6b6560;
+    --blanco: #fdfaf5;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--blanco); color: var(--negro); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.2rem 4rem;
+    background: rgba(15,14,13,0.95);
+    backdrop-filter: blur(8px);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; }
+  .nav-logo-text { display: flex; flex-direction: column; line-height: 1; }
+  .nav-logo-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--crema); letter-spacing: 0.18em; }
+  .nav-logo-sub { font-size: 0.58rem; color: var(--dorado); letter-spacing: 0.28em; text-transform: uppercase; margin-top: 0.15rem; }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { color: var(--crema); text-decoration: none; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.8; transition: opacity 0.2s; }
+  .nav-links a:hover { opacity: 1; color: var(--dorado-claro); }
+  .nav-links a.active { opacity: 1; color: var(--dorado); }
+  .nav-cta { background: var(--dorado); color: var(--negro) !important; padding: 0.55rem 1.4rem; border-radius: 2px; font-weight: 500; opacity: 1 !important; transition: background 0.2s !important; }
+  .nav-cta:hover { background: var(--dorado-claro) !important; }
+
+  /* PAGE HEADER */
+  .page-header {
+    background: var(--negro);
+    padding: 9rem 4rem 5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-header::before {
+    content: '';
+    position: absolute; top: -20%; left: 50%; transform: translateX(-50%);
+    width: 700px; height: 400px;
+    background: radial-gradient(ellipse, rgba(184,150,62,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .page-header-eyebrow { font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--dorado); margin-bottom: 1.5rem; }
+  .page-header h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 4vw, 3.6rem); color: var(--crema); line-height: 1.15; margin-bottom: 1.2rem; }
+  .page-header h1 em { font-style: italic; color: var(--dorado-claro); }
+  .page-header p { font-size: 1.05rem; color: rgba(245,240,232,0.65); max-width: 560px; margin: 0 auto; line-height: 1.7; }
+
+  /* SECTION COMMON */
+  section { padding: 5rem 4rem; }
+  .section-label { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--dorado); margin-bottom: 1rem; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1.2; margin-bottom: 1rem; }
+  .section-subtitle { font-size: 1rem; color: var(--gris); line-height: 1.7; max-width: 580px; margin-bottom: 3rem; }
+
+  /* SERVICES GRID */
+  .services-section { background: var(--blanco); }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+  .service-card {
+    border: 1px solid rgba(107,101,96,0.2);
+    border-radius: 4px;
+    padding: 2.5rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    position: relative;
+  }
+  .service-card:hover { border-color: var(--dorado); box-shadow: 0 4px 24px rgba(184,150,62,0.08); }
+  .service-icon { font-size: 2rem; margin-bottom: 1.5rem; }
+  .service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.35rem; margin-bottom: 0.8rem; color: var(--negro); }
+  .service-card p { font-size: 0.9rem; color: var(--gris); line-height: 1.7; margin-bottom: 1.2rem; }
+  .service-card ul { list-style: none; padding: 0; }
+  .service-card ul li { font-size: 0.85rem; color: var(--gris); padding: 0.35rem 0; border-bottom: 1px solid rgba(107,101,96,0.1); display: flex; align-items: flex-start; gap: 0.5rem; }
+  .service-card ul li::before { content: '→'; color: var(--dorado); flex-shrink: 0; margin-top: 0.05rem; }
+
+  /* ATENCION LEVELS */
+  .atencion-section { background: var(--negro); }
+  .atencion-section .section-title { color: var(--crema); }
+  .atencion-section .section-subtitle { color: rgba(245,240,232,0.6); }
+  .levels-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+  .level-card {
+    background: rgba(245,240,232,0.04);
+    border: 1px solid rgba(184,150,62,0.2);
+    border-radius: 4px;
+    padding: 2.5rem;
+    position: relative;
+    transition: border-color 0.3s;
+  }
+  .level-card:hover { border-color: var(--dorado); }
+  .level-card.featured { border-color: var(--dorado); background: rgba(184,150,62,0.07); }
+  .level-badge { display: inline-block; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--dorado); background: rgba(184,150,62,0.12); padding: 0.3rem 0.8rem; border-radius: 2px; margin-bottom: 1.5rem; }
+  .level-card h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--crema); margin-bottom: 0.5rem; }
+  .level-price { font-size: 1.05rem; color: var(--dorado-claro); margin-bottom: 1rem; font-weight: 500; }
+  .level-desc { font-size: 0.88rem; color: rgba(245,240,232,0.6); line-height: 1.7; margin-bottom: 1.2rem; }
+  .level-includes { font-size: 0.8rem; color: rgba(245,240,232,0.45); margin-bottom: 0.4rem; letter-spacing: 0.05em; text-transform: uppercase; }
+  .level-list { list-style: none; padding: 0; }
+  .level-list li { font-size: 0.83rem; color: rgba(245,240,232,0.7); padding: 0.3rem 0; display: flex; gap: 0.5rem; align-items: flex-start; }
+  .level-list li::before { content: '·'; color: var(--dorado); flex-shrink: 0; }
+  .no-list { margin-top: 0.8rem; }
+  .no-list li { color: rgba(245,240,232,0.4) !important; }
+  .no-list li::before { content: '✕'; font-size: 0.7rem; color: rgba(245,240,232,0.3) !important; margin-top: 0.1rem; }
+
+  /* CTA SECTION */
+  .cta-section { background: var(--crema); text-align: center; }
+  .cta-section .section-title { margin-bottom: 0.8rem; }
+  .cta-section p { font-size: 1rem; color: var(--gris); margin-bottom: 2.5rem; max-width: 500px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+  .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn-primary { background: var(--dorado); color: var(--negro); padding: 0.9rem 2.2rem; border: none; border-radius: 2px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500; letter-spacing: 0.05em; cursor: pointer; text-decoration: none; transition: background 0.2s, transform 0.2s; display: inline-block; }
+  .btn-primary:hover { background: var(--dorado-claro); transform: translateY(-1px); }
+  .btn-outline { background: transparent; color: var(--negro); padding: 0.9rem 2.2rem; border: 1px solid rgba(15,14,13,0.3); border-radius: 2px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; letter-spacing: 0.05em; cursor: pointer; text-decoration: none; transition: border-color 0.2s; display: inline-block; }
+  .btn-outline:hover { border-color: var(--dorado); color: var(--dorado); }
+
+  /* FOOTER */
+  footer { background: var(--negro); padding: 3rem 4rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--dorado); letter-spacing: 0.15em; }
+  .footer-copy { font-size: 0.8rem; color: rgba(245,240,232,0.35); }
+  .footer-links { display: flex; gap: 2rem; }
+  .footer-links a { font-size: 0.8rem; color: rgba(245,240,232,0.4); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--dorado); }
+
+  /* HAMBURGER */
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--crema); border-radius: 2px; transition: 0.3s; }
+
+  @media (max-width: 900px) {
+    nav { padding: 1.2rem 1.5rem; }
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(15,14,13,0.98); padding: 1.5rem; gap: 1.2rem; }
+    .nav-links.open { display: flex; }
+    .hamburger { display: flex; }
+    .page-header { padding: 7rem 1.5rem 3.5rem; }
+    section { padding: 3.5rem 1.5rem; }
+    .services-grid { grid-template-columns: 1fr; }
+    .levels-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; text-align: center; padding: 2.5rem 1.5rem; }
+  }
+</style>
+    <link rel="canonical" href="https://akuerdos.com/servicios.html" />
+    <meta name="robots" content="index, follow" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Akuerdos Abogados",
+  "url": "https://akuerdos.com/servicios.html",
+  "telephone": "+593999923564",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle A N97, Edificio Mont Sinai, Oficina 101A",
+    "addressLocality": "Cumbayá",
+    "addressRegion": "Pichincha",
+    "addressCountry": "EC"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Santiago Orbe Cajiao",
+    "jobTitle": "Doctor en Jurisprudencia",
+    "alumniOf": "Pontificia Universidad Católica del Ecuador"
+  },
+  "areaServed": "Quito, Ecuador",
+  "knowsAbout": ["Derecho inmobiliario", "Sucesiones", "Derecho corporativo", "Contraloría General del Estado", "Derecho laboral"]
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAFLUlEQVR42u3ZT4gcVR7A8e/vvarq6T9jQoxmENaoy6oIQbwYIUoIErEnoOhONyyLaLyJ0YNnsacRxKMHERL/IuxhpzcbxY2TiYhRXMzKIqwHURzWXELU+Gcy0zM9XVXvPQ81GR0TInpIjzO/D9Spq169/tXv/alfgVJKKaWUUkoppZRSSimllFK/QFZnt4LQQvikU/TvhkagTQAJ+sgupDFhaUzY3/z7AESrJ+PGhXbTAXDXa8M4ew3e17BOCGGOvjtBp3kGgFbL0B5fFRk5+CHcahnabQ9A/fXdGNlLyHci5grELMXXAXwJ8m+8f5HJeyfPuXZdBrAxYek0HaMTI0jyLCb+M8aCWwTvAM4GxyAWbAkI4LKD5LOPMHXfKVrB0Ba//gJ49o/f8bfrSWqHseVrSOccgocgBFnZNwnFkA0YkmFLvvgF+WKdqeZng8zEAQWwZWA8MHp4C5IfxyZbyRYyhBiTgInPf5nPwKcQyIgrMS49gZFbeOOj08UJFz+IZjDxG6fIpsUXiCpng+eJyjkuewXX207e3UHevWXp2IHrbcdlrxCVcwRPNp8RV64iTw9A2xdtXnxmIPNeWzz1Tp24uodsNsfYmLhWItkQQRjB+S3AyIrD+S0QRkg2RMS1EiaKSWdz4upd3HnodtriB7HFGeA2xuyDEBBr8P4r8u4T9LsOCUOI/RPB/2wONAHcv+h++Q8sFs+TGLsZJGD8PuDtdTAHBgEJ7H71cqLKNMYOgwS8OwFyJz4v+hNw5+9t30IJTBTAT2GircWC474jtn/k9Xtmlu+xJjOw0TF0cJjydUSlYfJFjy0ZxF8J/jms+eLCDZTPPoirwfwBMYJLPTbeRO6uBT5cvseaHsKRVIpRnEDw/ycP93J07H+/qo09B28kuEOYeCtiwOW19fMqJyaAgIjBZ3vpX/oZ9c7L2NJl+PR6qn4b8+YxhP8U2xe5GRs/g08/xiSf4vqn6c4+RLm6l6h8DAjnzJlrehvj/HyRNf0Z3hx7j+p3bYY23Y/LThLMceZqNWAzwVTx1EA2089qBHMcl51kaNP9VIbHOdJ8F7c4g1jB0Fv7Aew0io1uFE+T9RYwcZXdr1YJfppkg0C4GUkP4HoCkoLJweQYnxa9dfshbC/O9dPsnKhhkip5bx5f/XzFPdZmBkqgFQxv3P0VEt6ntDEmrj7NZON5uqd34WWUEI39uGh7KQ4RhiLByxhZOkr31C4mmy9QjZ6mtDEG3uPI6GlawVzsCs3FH8LHxs3SVuUAbhFMtI/6PycJ3Zsw8jwmeoSNbgb8T+dnSxbPYONHSUr7CYs3UT94BGMfJl8AZP+Kttf8u3CrZWAcPjx4jLhyGz6HqAzBQzqXEiqXYOafIth3CF4wspP52cepXnKGuJYgBvJe8c6cdd9hcux2WsggqjKDWUQYh7YEnH8Qn34PAfpnemQL7hceqpAtOPpnigXD9b/B5w8ut7luVuG2eFpBONqcJkv3gHxLXC1DAC64CXYQIKmWga/xWZ2pv5wosm8w5awBZeBSEBsTlqnmB6Rzt+LTYyQ1i02Glt76PBJCceApbwmYeIikZsmzt0hndjDZ+O9ycWJABvtNpNN0S1XpT4Fd7HntrxAeoDcsVBYqBBMTEIJUGO4a5pOj5PMvcfievy9XdjpNx7rXaplzig71Q9sYnRhhdGKE+qFtRZHgp0WJltHAna9WuCJQ56nmrLLPmqs8K4MUnzw125RSSimllFJKKaWUUkoppZRSSimllFJKKaV+N34A56EgE/RKyEAAAAAASUVORK5CYII=" alt="Akuerdos Abogados" style="height:48px;width:48px;object-fit:contain;" />
+              <span class="nav-logo-text">
+                <span class="nav-logo-name">AKUERDOS</span>
+                <span class="nav-logo-sub">ABOGADOS</span>
+              </span>
+            </a>
+  <button class="hamburger" aria-label="Menú" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="servicios.html" class="active">Servicios</a></li>
+    <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#contacto" class="nav-cta">Consulta</a></li>
+  </ul>
+</nav>
+
+<header class="page-header">
+  <p class="page-header-eyebrow">Akuerdos Abogados — Cumbayá, Quito</p>
+  <h1>Protegemos lo que<br>usted ha construido</h1>
+  <p>Más de 20 años de experiencia en derecho ecuatoriano, con profundo conocimiento en control gubernamental, derecho inmobiliario y corporativo.</p>
+</header>
+
+<!-- SERVICIOS PRINCIPALES -->
+<section class="services-section">
+  <div class="section-label">Áreas de práctica</div>
+  <h2 class="section-title">Nuestros servicios jurídicos</h2>
+  <p class="section-subtitle">Asesoría especializada para proteger su patrimonio, su empresa y sus derechos frente al Estado.</p>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-icon">🏛️</div>
+      <h3>Contraloría y Control Gubernamental</h3>
+      <p>Defensa técnica ante procesos de responsabilidad civil culposa, glosas y órdenes de reintegro emitidas por la Contraloría General del Estado.</p>
+      <ul>
+        <li>Defensa en exámenes especiales y auditorías</li>
+        <li>Impugnación de resoluciones de responsabilidad</li>
+        <li>Recursos administrativos ante la CGE</li>
+        <li>Acciones contencioso-administrativas</li>
+        <li>Excepciones a coactiva de la Contraloría</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🏠</div>
+      <h3>Derecho Inmobiliario</h3>
+      <p>Protección integral de su patrimonio inmueble: compraventas, regularizaciones, subdivisiones y debida diligencia.</p>
+      <ul>
+        <li>Due diligence predial completo</li>
+        <li>Compraventas y promesas de compraventa</li>
+        <li>Regularización de excedentes y diferencias</li>
+        <li>Subdivisiones y urbanizaciones</li>
+        <li>Levantamiento de prohibiciones e hipotecas</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">⚖️</div>
+      <h3>Derecho Corporativo</h3>
+      <p>Constitución, operación y reestructuración de sociedades. Contratos comerciales y protección del patrimonio empresarial.</p>
+      <ul>
+        <li>Constitución y liquidación de compañías</li>
+        <li>Contratos comerciales y joint ventures</li>
+        <li>Compliance empresarial</li>
+        <li>Propiedad intelectual y marcas (SENADI)</li>
+        <li>Reestructuración societaria</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">👨‍👩‍👧</div>
+      <h3>Derecho Sucesoral y Familia</h3>
+      <p>Planificación patrimonial y procesos sucesorales para proteger el legado familiar con seguridad jurídica.</p>
+      <ul>
+        <li>Declaratorias de herederos</li>
+        <li>Particiones y adjudicaciones</li>
+        <li>Donaciones y planificación sucesoral en vida</li>
+        <li>Testamentos y fideicomisos de tenencia</li>
+        <li>Liquidación de sociedad conyugal</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🤝</div>
+      <h3>Derecho Laboral</h3>
+      <p>Asesoría a empleadores y trabajadores en relaciones laborales, despidos, visto bueno y conflictos colectivos.</p>
+      <ul>
+        <li>Visto bueno y desahucio</li>
+        <li>Despido intempestivo y actas de finiquito</li>
+        <li>Contratos y reglamentos internos</li>
+        <li>Defensa ante la Inspectoría del Trabajo</li>
+        <li>Jubilación patronal</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">📜</div>
+      <h3>Acciones Constitucionales</h3>
+      <p>Protección de derechos fundamentales a través de acciones de amparo, hábeas corpus, hábeas data y acción de protección.</p>
+      <ul>
+        <li>Acción de protección</li>
+        <li>Hábeas data y rectificación de datos</li>
+        <li>Hábeas corpus</li>
+        <li>Medidas cautelares constitucionales</li>
+        <li>Recursos de apelación ante Corte Provincial</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">💰</div>
+      <h3>Cobro Ejecutivo de Deudas</h3>
+      <p>Recuperación judicial de cartera vencida mediante juicio ejecutivo, monitorio y procedimiento de ejecución.</p>
+      <ul>
+        <li>Juicio ejecutivo por letras de cambio y pagarés</li>
+        <li>Proceso monitorio</li>
+        <li>Cobro de expensas en propiedad horizontal</li>
+        <li>Embargo y remate de bienes</li>
+        <li>Negociación prejudicial</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">📊</div>
+      <h3>Optimización Tributaria Inmobiliaria</h3>
+      <p>Estructuración legal de operaciones inmobiliarias para optimizar la carga tributaria dentro del marco legal ecuatoriano vigente.</p>
+      <ul>
+        <li>Análisis de impuesto a la plusvalía</li>
+        <li>Estructuración de transferencias de dominio</li>
+        <li>Planificación fiscal en operaciones inmobiliarias</li>
+        <li>Revisión de ordenanzas municipales aplicables</li>
+        <li>Consultoría tributaria inmobiliaria</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- CÓMO TRABAJAMOS -->
+<section class="atencion-section">
+  <div class="section-label">Cómo trabajamos</div>
+  <h2 class="section-title" style="color:var(--crema)">Así comenzamos a trabajar juntos</h2>
+  <p class="section-subtitle">Un proceso claro, sin sorpresas. Usted decide en qué momento avanzar.</p>
+
+  <div class="levels-grid" style="grid-template-columns: repeat(4, 1fr);">
+
+    <div class="level-card">
+      <div class="level-badge">Paso 1</div>
+      <h3>Cuéntenos su situación</h3>
+      <div class="level-price" style="color:var(--dorado-claro); font-size:0.9rem; font-weight:400;">Sin costo · Por WhatsApp</div>
+      <p class="level-desc">Escríbanos brevemente qué le ocurre. Le respondemos en menos de 2 horas hábiles: confirmamos si su caso tiene vía legal y le explicamos el siguiente paso.</p>
+      <div class="level-includes">En este paso:</div>
+      <ul class="level-list">
+        <li>Usted describe su situación en sus propias palabras</li>
+        <li>Evaluamos si podemos ayudarle</li>
+        <li>Le indicamos el tipo de servicio que corresponde</li>
+        <li>Sin compromiso de ningún tipo</li>
+      </ul>
+    </div>
+
+    <div class="level-card featured">
+      <div class="level-badge">Paso 2</div>
+      <h3>Consulta jurídica formal</h3>
+      <div class="level-price" style="font-size:0.9rem; font-weight:400;">Virtual o presencial · Honorario acordado previamente</div>
+      <p class="level-desc">Nos reunimos para analizar su caso en profundidad. Usted recibe una opinión jurídica fundada y opciones de estrategia. El honorario se acredita si continúa con nosotros.</p>
+      <div class="level-includes">En este paso:</div>
+      <ul class="level-list">
+        <li>Análisis completo de su situación legal</li>
+        <li>Opinión jurídica con opciones concretas</li>
+        <li>Estrategia recomendada para su caso</li>
+        <li>Definición del alcance del análisis documental</li>
+      </ul>
+    </div>
+
+    <div class="level-card featured">
+      <div class="level-badge">Paso 3</div>
+      <h3>Análisis documental del caso</h3>
+      <div class="level-price" style="font-size:0.9rem; font-weight:400;">Honorario acordado previamente</div>
+      <p class="level-desc">Revisamos la documentación de su caso: escrituras, contratos, títulos, expedientes u otros instrumentos relevantes. Este análisis nos permite elaborar una propuesta de servicios precisa y realista.</p>
+      <div class="level-includes">En este paso:</div>
+      <ul class="level-list">
+        <li>Revisión técnica de los documentos del caso</li>
+        <li>Identificación de fortalezas y riesgos jurídicos</li>
+        <li>Elaboración de propuesta de servicios detallada</li>
+        <li>Sin este análisis no hay propuesta responsable</li>
+      </ul>
+    </div>
+
+    <div class="level-card">
+      <div class="level-badge">Paso 4</div>
+      <h3>Contratación del servicio</h3>
+      <div class="level-price" style="color:var(--dorado-claro); font-size:0.9rem; font-weight:400;">Honorario definido por escrito</div>
+      <p class="level-desc">Si decide avanzar, firmamos contrato con alcance, plazos y honorarios claramente establecidos. Nada se inicia sin su autorización expresa.</p>
+      <div class="level-includes">En este paso:</div>
+      <ul class="level-list">
+        <li>Contrato de servicios por escrito</li>
+        <li>Honorarios fijos o acordados por etapas</li>
+        <li>Comunicación directa con su abogado</li>
+        <li>Informes de avance periódicos</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="section-label">El primer paso no tiene costo</div>
+  <h2 class="section-title">Cuéntenos qué le preocupa</h2>
+  <p>Escríbanos por WhatsApp. Le respondemos, le presentamos el equipo y le decimos con claridad si podemos ayudarle. Sin compromiso.</p>
+  <div class="cta-buttons">
+    <a href="https://wa.me/593999923564?text=Hola,%20necesito%20orientaci%C3%B3n%20legal%20sobre%20mi%20situaci%C3%B3n" class="btn-primary" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">AKUERDOS</div>
+  <div class="footer-links">
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#contacto">Contacto</a>
+  </div>
+  <p class="footer-copy">© 2026 Akuerdos Abogados — Cumbayá, Quito</p>
+</footer>
+
+</body>
+</html>
