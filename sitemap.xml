@@ -1,39 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://akuerdos.com/</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://www.akuerdos.com/</loc>
+    <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://akuerdos.com/servicios.html</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://www.akuerdos.com/servicios.html</loc>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
-    <loc>https://akuerdos.com/nosotros.html</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.akuerdos.com/nosotros.html</loc>
+    <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://akuerdos.com/blog.html</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.akuerdos.com/blog.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.akuerdos.com/noticias.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.akuerdos.com/agendar.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.akuerdos.com/servicios/cobro-deudas.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.akuerdos.com/servicios/compraventa-inmuebles-ecuador.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.akuerdos.com/servicios/defensa-contraloria.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.akuerdos.com/servicios/derecho-inmobiliario.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.akuerdos.com/servicios/due-diligence-aldcft-ecuador.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.akuerdos.com/servicios/empresas-contratistas-estado.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.akuerdos.com/servicios/estructuracion-tributaria-inmobiliaria.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://www.akuerdos.com/servicios/sucesiones-herencias.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.akuerdos.com/blog/como-cobrar-deuda-ecuador-juicio-ejecutivo.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.akuerdos.com/blog/como-tramitar-herencia-ecuador.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.akuerdos.com/blog/contratacion-publica-riesgos-legales-ecuador.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.akuerdos.com/blog/cuando-demandar-deudor-ecuador.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.akuerdos.com/blog/error-comprar-inmueble-ecuador.html</loc>
+    <lastmod>2026-11-03</lastmod>
   </url>
   <url>
     <loc>https://www.akuerdos.com/blog/feriado-difuntos-previsiones-legales-ecuador.html</loc>
-    <lastmod>2026-10-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://akuerdos.com/agendar.html</loc>
+    <loc>https://www.akuerdos.com/blog/glosa-contraloria-como-defenderme.html</loc>
     <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.akuerdos.com/blog/recuperar-cartera-empresarial-ecuador.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.akuerdos.com/blog/responsabilidad-civil-contraloria-ecuador.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.akuerdos.com/blog/riesgos-legales-contratar-estado-ecuador.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.akuerdos.com/blog/visto-bueno-ecuador-guia-empleador.html</loc>
+    <lastmod>2026-11-03</lastmod>
   </url>
 </urlset>
